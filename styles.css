@@ -1,0 +1,258 @@
+/* reset box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* base */
+body {
+  margin: 0;
+  font-size: 16px; /* plus contrôlable que 'large' */
+  background-color: #ffffff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* utiliser le sélecteur .card-container (class) car ton HTML l'utilise */
+.card-container {
+  padding: 16px;
+}
+
+/* carte principale */
+#card {
+  margin: 32px auto;
+  max-width: 360px;
+  /* si tu veux une hauteur relative, préfère min-height: 600px; ou supprimer */
+  min-height: 700px;
+  box-shadow: 0 4px 16px rgba(88, 54, 54, 0.12);
+  border-radius: 12px;
+  background-color: #001A2D;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* images générales dans la carte */
+#card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* entête : image pleine largeur */
+#en-tete img {
+  width: 100%;
+  height: 150px;         /* hauteur fixe d'en-tête */
+  object-fit: cover;     /* recadre sans déformer */
+  display: block;
+}
+
+/* profil */
+#profile {
+  padding: 16px;
+  position: relative;
+  text-align: center;
+}
+
+/* avatar : sur une <img>, utiliser object-fit */
+#avatar {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  margin-top: -65px;     /* légèrement sorti de l'entête */
+  border-radius: 50%;
+  object-fit: cover;     /* important pour que l'image remplisse le cercle */
+  border: 0px solid white; /* optionnel : contour pour visibilité */
+  background-color: #eee; /* fallback si image absente */
+}
+
+/* noms / bio */
+#nom  {
+  font-size: 22px;
+  color: white;
+  margin-top: 12px;
+  text-align: center;
+}
+
+#bio {
+  font-size: 14px;
+  color: #dfe6ea;
+  font-style: italic;
+  margin-top: -12px;
+  text-align: center;
+}
+
+/* boutons sociaux */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 0px 0;
+  padding: 0 16px;
+}
+
+/* chaque icône */
+.social-icon {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* forcer l'image à tenir dans l'icône */
+.social-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* petits paragraphes généraux */
+p {
+  color: #666;
+  margin: 0;
+}
+
+/* responsive simple */
+@media (max-width: 420px) {
+  #card {
+    margin: 16px;
+  }
+  #en-tete img {
+    height: 120px;
+  }
+}
+
+
+
+/* Bloc Présentation */
+#presentation {
+  margin: 0;
+  padding: 20px;
+}
+
+p {
+  color: white;
+  text-align:justify;
+  font-family:initial
+}
+
+
+/* Bloc des hobbies */
+
+#hobbies {
+  margin: 5px;
+  text-align: center;
+  background-color: white;
+  height: 69px;
+  width: 340px;
+  border-radius: 5%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: #001A2D;
+  font-weight: bold;
+  gap: 5px;
+  justify-content: center;
+}
+
+
+#ill{
+  text-align: left;
+  margin-left: -20px;
+}
+
+#gaming{
+  text-align: center;
+  margin-top: -20px;
+  margin-left: -70px;
+}
+
+#sport{
+  text-align: center;
+  margin-top: -20px;
+  margin-left: 70px;
+}
+
+#musee{
+  text-align: right;
+  margin-top: -20px;
+  margin-right: 16px;
+}
+
+#dessin{
+  text-align: left;
+  margin-top: 0px;
+  margin-left: -20px;
+}
+
+#voyage{
+  text-align: left;
+  margin-top: -20px;
+  margin-left: 80px;
+}
+
+#esport{
+  text-align: right;
+  margin-top: -20px;
+  margin-right: 88px;
+}
+
+
+#cinema{
+  text-align: right;
+  margin-top: -20px;
+  margin-right: 10px;
+}
+
+
+
+/* boutons sociaux */
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 0px 0;
+  padding: 0 16px;
+}
+
+/* chaque icône */
+.icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  align-items: center;
+}
+
+
+  .footer {
+    margin: 0;
+    width: 360px;
+    height: 38px;
+    color: #000000;
+    background-color: #B23407;
+    height: auto;
+}
+
+.contact {
+  width: 360px;
+  height: 68px;
+  color: #000000;
+  background-color: #B23407;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  
+} 
